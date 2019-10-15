@@ -1,0 +1,17 @@
+﻿生成启动时间为 2019/8/17 10:58:41。
+     1>项目“C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\day 8.16\day 8.16.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt heapsort.c
+         heapsort.c
+     1>c:\users\asus\documents\visual studio 2013\姜佳乐\作业\day 8.16\day 8.16\heapsort.c(73): warning C4047: “函数”:“int”与“char [2]”的间接级别不同
+     1>c:\users\asus\documents\visual studio 2013\姜佳乐\作业\day 8.16\day 8.16\heapsort.c(73): warning C4024: “putchar”: 形参和实参 1 的类型不同
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\Debug\day 8.16.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\Debug\day 8.16.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\Debug\day 8.16.lib" /MACHINE:X86 Debug\heap.obj
+         Debug\heapsort.obj
+         Debug\main.obj
+         day 8.16.vcxproj -> C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\Debug\day 8.16.exe
+     1>已完成生成项目“C:\Users\ASUS\Documents\Visual Studio 2013\姜佳乐\作业\day 8.16\day 8.16\day 8.16.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.47
