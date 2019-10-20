@@ -1,0 +1,14 @@
+﻿生成启动时间为 2019/10/20 9:12:12。
+     1>项目“E:\Visual Studio 2013\Projects\10.15\10.15\10.15.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt binaryTree.h main.cpp
+         main.cpp
+     1>e:\visual studio 2013\projects\10.15\10.15\main.cpp(17): fatal error C1075: 与左侧的 圆括号“(”(位于“e:\visual studio 2013\projects\10.15\10.15\binarytree.h(151)”)匹配之前遇到文件结束
+         binaryTree.h
+     1>e:\visual studio 2013\projects\10.15\10.15\binarytree.h(204): fatal error C1075: 与左侧的 圆括号“(”(位于“e:\visual studio 2013\projects\10.15\10.15\binarytree.h(151)”)匹配之前遇到文件结束
+         正在生成代码...
+     1>已完成生成项目“E:\Visual Studio 2013\Projects\10.15\10.15\10.15.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.82
