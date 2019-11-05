@@ -20,6 +20,11 @@ int main0()
 	s1.push_back('c');
 	s1.push_back('d');
 	s1.push_back('e');
+	for (int i = 0; i < s1.size(); i++)
+	{
+		cout << s1[i];
+	}
+	cout << endl;
 	reverseString(s1);
 	for (int i = 0; i < s1.size(); i++)
 	{

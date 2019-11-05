@@ -37,7 +37,9 @@ bool isPalindrome(string s)
 int main()
 {
 	string s(" race a car");
-	cout << isPalindrome(s);
+	string s1("abc d d cba");
+	cout << isPalindrome(s) << endl;
+	cout << isPalindrome(s1) <<endl;
 	system("pause");
 	return 0;
 }

@@ -9,11 +9,6 @@ int firstUniqChar(string s)
 	{
 		count[i - 'a']++;
 	}
-	//int j = 0;
-	//for (auto & i : count)
-	//{
-	//	cout << (char)('a' + j++) << i << endl;;
-	//}
 	for (int i = 0; i < s.size(); i++)
 	{
 		if (count[s[i] - 'a'] == 1)
