@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 void resreveOneWord(string& s, int spos, int epos)
@@ -50,7 +51,3 @@ int main()
 }
 
 
-
-
-//string s1("abcdefg");
-//cout << reverseStr(s1, 8) << endl;

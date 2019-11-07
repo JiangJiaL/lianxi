@@ -1,15 +1,18 @@
-﻿生成启动时间为 2019/11/6 8:30:54。
-     1>项目“E:\Visual Studio 2013\Projects\每日一题\每日一题\每日一题.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2019/11/7 16:55:30。
+     1>项目“E:\Visual Studio 2013\Projects\lianxi\每日一题\每日一题\每日一题.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 1.cpp main.cpp
          main.cpp
-     1>e:\visual studio 2013\projects\每日一题\每日一题\main.cpp(52): warning C4715: “AllSum”: 不是所有的控件路径都返回值
+         1.cpp
+     1>e:\visual studio 2013\projects\lianxi\每日一题\每日一题\1.cpp(11): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\visual studio 2013\projects\lianxi\每日一题\每日一题\1.cpp(16): warning C4018: “<”: 有符号/无符号不匹配
+         正在生成代码...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Visual Studio 2013\Projects\每日一题\Debug\每日一题.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Visual Studio 2013\Projects\每日一题\Debug\每日一题.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Visual Studio 2013\Projects\每日一题\Debug\每日一题.lib" /MACHINE:X86 Debug\1.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Visual Studio 2013\Projects\lianxi\每日一题\Debug\每日一题.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Visual Studio 2013\Projects\lianxi\每日一题\Debug\每日一题.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Visual Studio 2013\Projects\lianxi\每日一题\Debug\每日一题.lib" /MACHINE:X86 Debug\1.obj
          Debug\main.obj
-         每日一题.vcxproj -> E:\Visual Studio 2013\Projects\每日一题\Debug\每日一题.exe
-     1>已完成生成项目“E:\Visual Studio 2013\Projects\每日一题\每日一题\每日一题.vcxproj”(Build 个目标)的操作。
+         每日一题.vcxproj -> E:\Visual Studio 2013\Projects\lianxi\每日一题\Debug\每日一题.exe
+     1>已完成生成项目“E:\Visual Studio 2013\Projects\lianxi\每日一题\每日一题\每日一题.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.51
+已用时间 00:00:02.18
