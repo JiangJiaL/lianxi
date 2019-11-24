@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <string>
+#include<algorithm>
 using namespace std;
 //
 //int main()
@@ -297,3 +298,96 @@ int main0()
 
 #endif
 // 连续子数组的最大和
+ //分治法
+int dealMax(vector<int>array, int begin, int end)
+{
+	if (begin == end)
+	{
+		return array[begin];
+	}
+	int mid = (begin + end) / 2;
+	int leftmax = dealMax(array, begin, mid);
+	int rightmax = dealMax(array, mid + 1, end);
+
+	int crossmax = 0;
+
+	int i;
+	int sum = 0;
+	int tmpmax = array[mid];
+	for (i = mid; i >= begin; i--)
+	{
+		sum += array[i];
+		if (sum > tmpmax)
+		{
+			tmpmax = sum;
+		}
+	}
+	crossmax += tmpmax;
+
+	sum = 0;
+	tmpmax = array[mid + 1];
+	for (i = mid + 1; i <= end; i++)
+	{
+		sum += array[i];
+		if (sum > tmpmax)
+		{
+			tmpmax = sum;
+		}
+	}
+	crossmax += tmpmax;
+	return max(max(leftmax, rightmax), crossmax);
+}
+
+
+int Max(vector<int> array)
+{
+	return dealMax(array, 0, array.size() - 1);
+}
+
+int main5()
+{
+
+	int data[] = { 6, -3, -2, 7, -15, 1, 2, 2, 4 };
+	vector<int> num (data, data + 8);
+	cout << Max(num);
+
+	system("pause");
+	return 0;
+}
+
+
+
+//动态规划求最大子段和
+int FindGreatestSumOfSubArray(vector<int> array)
+{
+	int tmp = array[0];
+	int maxpre = array[0];
+	int i;
+	for (i = 1; i < array.size(); i++)
+	{
+		if (maxpre > 0)
+		{
+			maxpre += array[i];
+		}
+		else
+		{
+			maxpre = array[i];
+		}
+		if (maxpre > tmp)
+		{
+			tmp = maxpre;
+		}
+	}
+	return tmp;
+
+}
+
+int main()
+{
+	int data[] = { 6, -3, -2, 7, -15, 1, 2, 2, 4 };
+	vector <int> v(data, data+9);
+	cout << FindGreatestSumOfSubArray(v);
+
+	system("pause");
+	return 0;
+}
