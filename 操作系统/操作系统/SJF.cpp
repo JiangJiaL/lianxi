@@ -27,11 +27,11 @@ void Sprint(process * P)
 
 void SSortSertime(process * P)
 {
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		for (int j = 0; j < 4 - 1 - i; j++)
+		for (int j = 0; j < 5 - 1 - i; j++)
 		{
-			if ((P + j)->sertime >(P + j + 1)->sertime)
+			if ((P + j)->sertime >=(P + j + 1)->sertime)
 			{
 				string tmp;
 				int tmp1;
@@ -41,7 +41,7 @@ void SSortSertime(process * P)
 				(P + j)->name = (P + j + 1)->name;
 				(P + j + 1)->name = tmp;
 
-			tmp1 = (P + j)->arrtime;
+			    tmp1 = (P + j)->arrtime;
 				(P + j)->arrtime = (P + j + 1)->arrtime;
 				(P + j + 1)->arrtime = tmp1;
 
@@ -80,17 +80,26 @@ void SJF(process *P)
 
 void SFinPrint(process *P)
 {
+	double sumturntime = 0.0;//所有进程的周转时间
+	double sumTurntime = 0.0;//所有进程的带权周转时间
+	for (int i = 0; i < 5; i++)
+	{
+		sumturntime += P[i].turntime;
+		sumTurntime += P[i].Turntime;
+	}
 	cout << "进程名" << "  " << "到达时间" << " " << "服务时间" << "  " << "完成时间" << "  " << "周转时间" << "  " << "带权周转时间" << endl;
 	for (int i = 0; i < 5; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" << "   " << P->sertime << "\t\t" << P->fintime << "\t" << P->turntime << "\t\t" << P->Turntime << endl;
 		P++;
 	}
+	printf("周转时间的平均值是 ：%f \n", (sumturntime / 5.0));
+	printf("带权周转时间的平均值是 ：%f \n", (sumTurntime / 5.0));
 }
 
-int main()
+int mainS()
 {
-	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0}, { "D", 3.0, 2.0}, { "E", 4.0, 4.0 } };
+	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0 }, { "D", 3.0, 2.0 }, { "E", 4.0, 4.0 } };
 
 	Sprint(P);
 	SSortSertime(P);

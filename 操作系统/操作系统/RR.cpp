@@ -19,9 +19,9 @@ struct process
 
 void RSortArrtime(process * P,int W)
 {
-	for (int i = 0; i < W-1; i++)
+	for (int i = 0; i < W; i++)
 	{
-		for (int j = 0; j < W - 2 - i; j++)
+		for (int j = 0; j < W - 1 - i; j++)
 		{
 			if ((P + j)->arrtime >(P + j + 1)->arrtime)
 			{
@@ -62,7 +62,7 @@ void RR(process *P, int W)
 {
 	for (int i = 0; i < W; i++)
 	{
-		P[i].N = 4.0;
+		P[i].N = 1.0;
 	}
 	double serive[5] = { 0 };
 	for (int i = 0; i < W; i++)
@@ -215,14 +215,23 @@ void Rprint(process * P,int W)
 }
 void RFinPrint(process *P,int W)
 {
+	double sumturntime = 0.0;//所有进程的周转时间
+	double sumTurntime = 0.0;//所有进程的带权周转时间
+	for (int i = 0; i < 5; i++)
+	{
+		sumturntime += P[i].turntime;
+		sumTurntime += P[i].Turntime;
+	}
 	cout << "进程名" << "  " << "到达时间" << " " << "服务时间" << "  " << "完成时间" << "  " << "周转时间" << "  " << "带权周转时间" << endl;
 	for (int i = 0; i < W; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" << "   " << P->sertime << "\t\t" << P->fintime << "\t" << P->turntime << "\t\t" << P->Turntime << endl;
 		P++;
 	}
+	printf("周转时间的平均值是 ：%f \n", (sumturntime / 5.0));
+	printf("带权周转时间的平均值是 ：%f \n", (sumTurntime / 5.0));
 }
-int mainR()
+int main()
 {
 	int W = 5;
 	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0 }, { "D", 3.0, 2.0 }, { "E", 4.0, 4.0 } };

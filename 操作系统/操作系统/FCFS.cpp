@@ -11,6 +11,8 @@ struct process
 	double fintime;//完成时间
 	double turntime;//周转时间
 	double Turntime;//带权周转时间
+	double Aturntime;//平均周转时间
+	double ATurntime;//平均带权周转时间
 };
 
 
@@ -19,7 +21,7 @@ struct process
 void print(process * P)
 {
 	cout << "进程名" << " " << "到达时间" << " " << "服务时间" << endl;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" << P->sertime << endl;
 		P++;
@@ -29,9 +31,9 @@ void print(process * P)
 
 void SortArrtime(process * P)
 {
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		for (int j = 0; j < 3 - 1 - i; j++)
+		for (int j = 0; j < 5 - 1 - i; j++)
 		{
 			if ((P + j)->arrtime >(P + j + 1)->arrtime)
 			{
@@ -58,6 +60,7 @@ void SortArrtime(process * P)
 void FCFS(process *P)
 {
 	int time = 0;
+
 	int i = 1;
 	P[0].fintime = P[0].arrtime + P[0].sertime;
 	P[0].turntime = P[0].fintime - P[0].arrtime;
@@ -74,22 +77,33 @@ void FCFS(process *P)
 		else
 		{
 			time++;
-		}
-		
+		}	
 	}
+	
+
 }
 void FinPrint(process *P)
 {
+	double sumturntime = 0.0;//所有进程的周转时间
+	double sumTurntime = 0.0;//所有进程的带权周转时间
+	for (int i = 0; i < 5; i++)
+	{
+		sumturntime += P[i].turntime;
+		sumTurntime += P[i].Turntime;
+	}
 	cout << "进程名" << "  " << "到达时间" << " " << "服务时间" <<"  " << "完成时间"<<"  " <<"周转时间" <<"  "<<"带权周转时间"<< endl;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" <<"   "<<P->sertime << "\t\t"<<P->fintime <<"\t"<<P->turntime<<"\t\t" <<P->Turntime <<endl;
 		P++;
 	}
+	printf("周转时间的平均值是 ：%f \n", (sumturntime / 5.0));
+	printf("带权周转时间的平均值是 ：%f \n", (sumTurntime / 5.0));
+
 }
-int main1()
+int main0()
 {
-	process P[5] = { { "A", 0.0, 1.0 }, { "B", 1.0, 100.0 }, { "C", 2.0, 1.0 }, { "D", 3.0, 100.0 } };
+	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0 }, { "D", 3.0, 2.0 }, { "E", 4.0, 4.0 } };
 	
 	print(P);
 	SortArrtime(P);
