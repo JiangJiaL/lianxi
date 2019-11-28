@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -17,7 +18,7 @@ struct process
 void Sprint(process * P)
 {
 	cout << "进程名" << " " << "到达时间" << " " << "服务时间" << endl;
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" << P->sertime << endl;
 		P++;
@@ -25,11 +26,11 @@ void Sprint(process * P)
 }
 
 
-void SSortSertime(process * P)
+void SSortSertime(process * P) //服务时间排序
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
-		for (int j = 0; j < 5 - 1 - i; j++)
+		for (int j = 0; j < 3 - 1 - i; j++)
 		{
 			if ((P + j)->sertime >=(P + j + 1)->sertime)
 			{
@@ -56,12 +57,12 @@ void SSortSertime(process * P)
 void SJF(process *P)
 {
 	int time = 0;
-	int i = 5;
+	int i = 3;
 	int j = 0;
 	P->flag = 0;
-	while (i > 1)
+	while (i >= 1)
 	{
-		for (int j = 0; j < 5; j++)
+		for (int j = 0; j < 3; j++)
 		{
 			if (P[j].arrtime <= time && P[j].flag == 0)
 			{
@@ -82,13 +83,13 @@ void SFinPrint(process *P)
 {
 	double sumturntime = 0.0;//所有进程的周转时间
 	double sumTurntime = 0.0;//所有进程的带权周转时间
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		sumturntime += P[i].turntime;
 		sumTurntime += P[i].Turntime;
 	}
 	cout << "进程名" << "  " << "到达时间" << " " << "服务时间" << "  " << "完成时间" << "  " << "周转时间" << "  " << "带权周转时间" << endl;
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		cout << P->name << "\t" << P->arrtime << "\t" << "   " << P->sertime << "\t\t" << P->fintime << "\t" << P->turntime << "\t\t" << P->Turntime << endl;
 		P++;
@@ -99,8 +100,8 @@ void SFinPrint(process *P)
 
 int mainS()
 {
-	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0 }, { "D", 3.0, 2.0 }, { "E", 4.0, 4.0 } };
-
+	//process P[3] = { { "A", 0.0, 3.0 }, { "B", 1.0, 1.0 }, { "C", 5.0, 2.0 } };
+	process P[3] = { { "A", 0.0, 2.0 }, { "B", 3.0, 4.0 }, { "C", 3.0, 2.0 } };
 	Sprint(P);
 	SSortSertime(P);
 	SJF(P);

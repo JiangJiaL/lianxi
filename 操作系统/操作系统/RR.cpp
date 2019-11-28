@@ -17,7 +17,7 @@ struct process
 };
 
 
-void RSortArrtime(process * P,int W)
+void RSortArrtime(process * P, int W)
 {
 	for (int i = 0; i < W; i++)
 	{
@@ -45,7 +45,7 @@ void RSortArrtime(process * P,int W)
 	}
 }
 
-void check(queue<string> qu,process * P,int time,int W)
+void check(queue<string> qu, process * P, int time, int W)
 {
 	for (int i = 0; i < W; i++)
 	{
@@ -54,7 +54,7 @@ void check(queue<string> qu,process * P,int time,int W)
 			qu.push(P[i].name);
 			P[i].num = 1;
 		}
-		
+
 	}
 }
 
@@ -109,46 +109,14 @@ void RR(process *P, int W)
 						time += P[j].N;
 						P[j].fintime = time;
 						qu.pop();
-				    	for (int i = 0; i < W; i++)
+						for (int i = 0; i < W; i++)
 						{
 							if (P[i].num == 0 && P[i].arrtime <= time)
 							{
-								queue<string> qu1;
-								qu1.push(P[i].name);
-								int size = qu.size();
-								for (int i = 0; !(qu.size() == 0) && i <= size; i++)
-								{
-									qu1.push(qu.front());
-									qu.pop();
-								}
-								qu = qu1;
+								qu.push(P[i].name);
 								P[i].num = 1;
 							}
 						}
-
-
-					/*	for (int i = 0; i < W; i++)
-						{
-							if (P[i].num == 0 && P[j].arrtime <= time)
-							{
-								queue<string> qu1;
-								for (int j = i; j < W; j++)
-								{
-									while (P[j].num == 0 && P[j].arrtime <= time && j < W)
-									{
-										qu1.push(P[j].name);
-										P[j].num = 1;
-										j++;
-										for (int i = 0; qu.size()&&i < qu.size(); i++)
-										{
-											qu1.push(qu.front());
-										}
-									}
-									qu = qu1;
-								}
-							}
-						}*/
-
 						qu.push(tmp);
 
 					}
@@ -158,42 +126,24 @@ void RR(process *P, int W)
 						P[j].fintime = time;
 						P[j].flag = 1;
 						qu.pop();
-						
-						for (int i = 0; i < W ; i++)
-						{
-							if (P[i].num == 0 && P[j].arrtime <= time)
-							{
-								queue<string> qu1;
-								for (int j = i; j < W;j++)
-								{	
-									while (P[j].num == 0 && P[j].arrtime <= time && j < W)
-									{
-										qu1.push(P[j].name);
-										P[j].num = 1;
-										j++;
-										for (int i = 0; qu.size()&&i < qu.size(); i++)
-										{
-											qu1.push(qu.front());
-										}
-									}
-									qu = qu1;
-								}
-							}
-							
-							
-						}
 
+						for (int i = 0; i < W; i++)
+						{
+							if (P[i].num == 0 && P[i].arrtime <= time)
+							{
+								qu.push(P[i].name);
+								P[i].num = 1;
+							}
+						}
 						W--;
 					}
 				}
 			}
 		}
-		
-
 	}
 }
 
-void RRturn(process * P,int W)
+void RRturn(process * P, int W)
 {
 	for (int j = 0; j < W; j++)
 	{
@@ -204,7 +154,7 @@ void RRturn(process * P,int W)
 
 
 
-void Rprint(process * P,int W)
+void Rprint(process * P, int W)
 {
 	cout << "进程名" << " " << "到达时间" << " " << "服务时间" << endl;
 	for (int i = 0; i < W; i++)
@@ -213,7 +163,7 @@ void Rprint(process * P,int W)
 		P++;
 	}
 }
-void RFinPrint(process *P,int W)
+void RFinPrint(process *P, int W)
 {
 	double sumturntime = 0.0;//所有进程的周转时间
 	double sumTurntime = 0.0;//所有进程的带权周转时间
@@ -235,11 +185,11 @@ int main()
 {
 	int W = 5;
 	process P[5] = { { "A", 0.0, 4.0 }, { "B", 1.0, 3.0 }, { "C", 2.0, 4.0 }, { "D", 3.0, 2.0 }, { "E", 4.0, 4.0 } };
-	Rprint(P,W);
-	RSortArrtime(P,W);
-	RR(P,W);
-	RRturn(P,W);
-	RFinPrint(P,W);
+	Rprint(P, W);
+	RSortArrtime(P, W);
+	RR(P, W);
+	RRturn(P, W);
+	RFinPrint(P, W);
 
 	system("pause");
 	return 0;
