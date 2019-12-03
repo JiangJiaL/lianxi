@@ -64,7 +64,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FCFS.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RR.cpp" />
+    <ClCompile Include="SJF.cpp" />
+    <ClCompile Include="sort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="process.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
