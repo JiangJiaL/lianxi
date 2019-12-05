@@ -67,6 +67,7 @@
     <ClCompile Include="FCFS.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RR.cpp" />
+    <ClCompile Include="RR1.cpp" />
     <ClCompile Include="SJF.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>
