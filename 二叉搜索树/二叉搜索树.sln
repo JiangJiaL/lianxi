@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "二叉搜索树", "二叉搜索树\二叉搜索树.vcxproj", "{195E8CBD-6663-418B-A8F8-CE8E02817269}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVL树", "AVL树\AVL树.vcxproj", "{4E7B12B1-531B-478C-A168-9AEE01F2B4CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{195E8CBD-6663-418B-A8F8-CE8E02817269}.Debug|Win32.ActiveCfg = Debug|Win32
+		{195E8CBD-6663-418B-A8F8-CE8E02817269}.Debug|Win32.Build.0 = Debug|Win32
+		{195E8CBD-6663-418B-A8F8-CE8E02817269}.Release|Win32.ActiveCfg = Release|Win32
+		{195E8CBD-6663-418B-A8F8-CE8E02817269}.Release|Win32.Build.0 = Release|Win32
+		{4E7B12B1-531B-478C-A168-9AEE01F2B4CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E7B12B1-531B-478C-A168-9AEE01F2B4CF}.Debug|Win32.Build.0 = Debug|Win32
+		{4E7B12B1-531B-478C-A168-9AEE01F2B4CF}.Release|Win32.ActiveCfg = Release|Win32
+		{4E7B12B1-531B-478C-A168-9AEE01F2B4CF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
